@@ -15,7 +15,7 @@ import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 
 import * as config from '@/lib/config'
-
+import { Tracker } from '@/components/Tracker'
 import { Providers } from './providers'
 
 export const metadata: Metadata = {
@@ -84,6 +84,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body>
+        <Tracker />
         <Providers>{children}</Providers>
       </body>
     </html>
